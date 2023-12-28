@@ -37,6 +37,7 @@ public class SplashActivity extends AppCompatActivity {
 
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                 .putBoolean("isFirstRun", false).apply();
+
         finishAffinity();
         finish();
     }

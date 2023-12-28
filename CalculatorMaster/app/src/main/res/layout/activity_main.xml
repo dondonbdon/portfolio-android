@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
 
     <TextView
         android:id="@+id/equationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/biko_regular"
+        android:fontFamily="@font/digital_7_mono"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
         android:gravity="end"
         android:paddingHorizontal="40dp"
         android:textSize="30sp"
@@ -23,8 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:autoSizeTextType="uniform"
-        android:fontFamily="@font/biko_bold"
+        android:maxLines="1"
+        android:fontFamily="@font/digital_7_mono"
         android:gravity="end"
+        android:text=""
+
+        android:textColor="@color/white"
         android:paddingHorizontal="40dp"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout" />
@@ -36,7 +43,7 @@
         android:columnCount="4"
         android:rowCount="5"
         android:background="@drawable/rect_grid_holder"
-        android:backgroundTint="#F0F0F0"
+        android:backgroundTint="@color/grey5"
         android:useDefaultMargins="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.65"
@@ -215,7 +222,7 @@
             android:textSize="25sp"/>
 
         <TextView
-            android:id="@+id/MinusSymbol"
+            android:id="@+id/minusSymbol"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
